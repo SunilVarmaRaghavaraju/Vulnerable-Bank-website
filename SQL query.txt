@@ -1,0 +1,28 @@
+SQL query to create DATABASE:
+
+CREATE DATABASE capone_bank;
+USE capone_bank;
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    password VARCHAR(255),
+    email VARCHAR(100),
+    balance DECIMAL(10,2),
+    role VARCHAR(10) DEFAULT 'user'
+);
+
+CREATE TABLE transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    from_user INT,
+    to_user INT,
+    amount DECIMAL(10,2),
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (from_user) REFERENCES users(id),
+    FOREIGN KEY (to_user) REFERENCES users(id)
+);
+
+To add USERS to the database:
+
+INSERT INTO users (username, password, email, role, balance) 
+VALUES ('admin', 'administrator', 'admin@capone.bank.com', 'admin', 0.00);
