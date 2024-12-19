@@ -1,7 +1,7 @@
 # Vulnerable-Bank-website
 This is a vulnerable bank website I have developed as part of my capstone project to demonstrate OWASP vulnerabilities.
 
-Brief on the Vulnerable Bank website -
+## Brief on the Vulnerable Bank website
 This vulnerable bank website is named Cbank, and this project's main purpose was to demonstrate OWASP web vulnerabilities as part of my capstone. The website has two security modes where I wanted to demonstrate vulnerabilities in low-security mode and update or remediate the website as part of the high-security or high-level mode for demonstration.
 
 
